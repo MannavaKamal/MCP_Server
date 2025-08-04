@@ -74,11 +74,4 @@ def createInstance() -> str:
     return "created"
 
 
-if __name__ == "__main__":
-    import os
-    # Get port from environment variable, default to 8000
-    port = int(os.getenv('MCP_HTTP_PORT', '8000'))
-    host = os.getenv('MCP_HTTP_HOST', '127.0.0.1')
-    
-    # Initialize and run the server
-    mcp.run(transport='streamable-http', port=port, host=host)
+
