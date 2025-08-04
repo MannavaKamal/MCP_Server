@@ -1,6 +1,6 @@
 from mcp.server.fastmcp import FastMCP
 from typing import List
-import os
+
 
 # In-memory mock database with 20 leave days to start
 employee_leaves = {
@@ -75,5 +75,8 @@ def createInstance() -> str:
 
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 5003))  # Use Render-assigned port or fallback for local
-    mcp.run(host="0.0.0.0", port=port)
+
+
+    # Initialize and run the server
+    #mcp.run(transport='streamable-http', port=port, host=host)
+    mcp.run(transport='streamable-http')
