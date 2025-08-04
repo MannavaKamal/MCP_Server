@@ -74,4 +74,5 @@ def createInstance() -> str:
 
 
 if __name__ == "__main__":
-    mcp.run()
+    port = int(os.getenv("PORT", 5003))  # Use Render-assigned port or fallback for local
+    mcp.run(host="0.0.0.0", port=port)
